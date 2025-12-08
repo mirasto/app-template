@@ -23,15 +23,7 @@ export default defineConfig([
       },
     },
     rules: {
-      ...js.configs.recommended.rules,
-      ...React.configs.recommended.rules,
-      ...React.configs['jsx-runtime'].rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/jsx-no-target-blank': 'off',
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-      'no-unused-vars': 'warn',
-      'react/prop-types': 'off',
-      'react/jsx-key': 'warn',
+      'no-unused-vars': ['warn', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
 ])
