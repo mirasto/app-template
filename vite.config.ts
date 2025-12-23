@@ -1,10 +1,10 @@
-import { defineConfig, UserConfig } from 'vite'; // Додали UserConfig
+import { defineConfig, UserConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'node:url';
 import stylelint from 'vite-plugin-stylelint';
+import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 export default defineConfig(({ mode }): UserConfig => {
-  // Вказали тип повернення
   const isProd = mode === 'production';
   const BASE_PATH = '/repository-name/';
 
@@ -17,6 +17,7 @@ export default defineConfig(({ mode }): UserConfig => {
         fix: true,
         cache: false,
       }),
+      ViteMinifyPlugin({}),
     ],
 
     resolve: {
