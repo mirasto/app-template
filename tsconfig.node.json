@@ -4,7 +4,7 @@
     "target": "ES2022",
     "lib": ["ES2023"],
     "module": "ESNext",
-    "types": ["node"], // Ми це додали раніше
+    "types": ["node"],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -13,8 +13,6 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
-
-    /* 👇 ДОДАЙТЕ ЦЕЙ РЯДОК: Дозволити JS файли */
     "allowJs": true,
 
     /* Linting */
@@ -23,6 +21,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  /* 👇 ДОДАЙТЕ СЮДИ ВАШІ КОНФІГИ */
   "include": ["vite.config.ts", "eslint.config.js", "postcss.config.js", "stylelint.config.js"]
 }
