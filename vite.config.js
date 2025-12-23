@@ -1,10 +1,10 @@
-import { defineConfig, UserConfig } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'node:url';
 import stylelint from 'vite-plugin-stylelint';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
-export default defineConfig(({ mode }): UserConfig => {
+export default defineConfig(({ mode }) => {
   const isProd = mode === 'production';
   const BASE_PATH = '/repository-name/';
 
